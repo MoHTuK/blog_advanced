@@ -5,3 +5,20 @@ font-family: "Roboto", sans-serif;
 font-family: "DM Sans", sans-serif;
 font-family: "Poppins", sans-serif;
  */
+
+.img-fluid {
+  width: 100%;
+}
+
+#posts {
+  margin-bottom: 5em;
+}
+
+.grid {
+  margin: 0 auto;
+}
+
+.grid .grid-item {
+  width: calc(33.33333% - 20px);
+  margin-bottom: 3em;
+}

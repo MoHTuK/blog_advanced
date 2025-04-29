@@ -6,39 +6,75 @@
 {% block css_files %} <link rel="stylesheet" href="{% static 'blog/style.css' %}" {% endblock %}
 
 {% block content %}
-
-  <header id="header" class="shadow bg-light">
-    <nav class="container navbar">
-      <a href="#" class="nav-brand text-dark">Blog</a>
-
-      <button class='toggle-btn'><span><i class='fas fa-bars'></i></span></button>
-
-      <!-- collapse on toggle -->
-      <div class="collapse">
-        <ul class="navbar-nav">
-          <a href="" class="nav-link">Home</a>
-          <a href="" class="nav-link">Blog</a>
-          <a href="" class="nav-link">Pages</a>
-          <a href="" class="nav-link">About</a>
-          <a href="" class="nav-link">Contact</a>
-        </ul>
+<!-- Blog posts section -->
+  <section id='posts'>
+    <div class='container'>
+      <div class='grid'>
+        <!-- article  -->
+        <div class='grid-item'>
+          <article class='article'>
+            <div class='card'>
+              <div class="overflow-img">
+                <a href="">
+                  <img src="../../../static/imgs/img5.jpg" alt="img1" class="img-fluid">
+                </a>
+              </div>
+              <div class="card-body text-center px-1">
+                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
+                <p class="secondary-title text-secondary display-3">
+                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
+                  <span><i class="far fa-comments text-primary"></i>12</span>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- article  -->
+        <!-- article  -->
+        <div class='grid-item'>
+          <article class='article'>
+            <div class='card'>
+              <div class="overflow-img">
+                <a href="">
+                  <img src="../../../static/imgs/img6.jpg" alt="img1" class="img-fluid">
+                </a>
+              </div>
+              <div class="card-body text-center px-1">
+                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
+                <p class="secondary-title text-secondary display-3">
+                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
+                  <span><i class="far fa-comments text-primary"></i>12</span>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- article  -->
+        <!-- article  -->
+        <div class='grid-item'>
+          <article class='article'>
+            <div class='card'>
+              <div class="overflow-img">
+                <a href="">
+                  <img src="../../../static/imgs/img3.jpg" alt="img3" class="img-fluid">
+                </a>
+              </div>
+              <div class="card-body text-center px-1">
+                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
+                <p class="secondary-title text-secondary display-3">
+                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
+                  <span><i class="far fa-comments text-primary"></i>12</span>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- article  -->
+         
       </div>
-  <!-- collapse on toggle -->
-
-      <div class="collapse">
-        <ul class="navbar-nav">
-          <div class="search-box">
-            <a href="" class="nav-link"><i class='fas fa-search'></i></a>    
-          </div>
-          <a href="" class="nav-link"><i class='fab fa-github'></i></a>   
-          <a href="" class="nav-link"><i class='fab fa-telegram'></i></a>   
-          <a href="" class="nav-link"><i class='fab fa-instagram'></i></a>   
-        
-        </ul>
-      </div>
-    </nav>
-  
-    
-    
-  </header>
+    </div>
+  </section>
+  <!-- Blog posts section -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}
