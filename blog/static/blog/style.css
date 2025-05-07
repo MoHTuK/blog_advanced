@@ -21,4 +21,10 @@ font-family: "Poppins", sans-serif;
 .grid .grid-item {
   width: calc(33.33333% - 20px);
   margin-bottom: 3em;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  z-index: 100;
 }

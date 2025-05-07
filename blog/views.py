@@ -1,16 +1,16 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
+from blog.models import Blog
 
 # Create your views here.
 
-def starting_page(request):
-    return render(request, 'blog/index.html')
+class PostListView(ListView):
+    model = Blog
+    context_object_name = 'blogs'
+    template_name = 'blog/index.html'
 
 
-def all_posts(request):
-    pass
-
-
-def post_detail(request, slug):
-    pass
+class PostDetailView(DetailView):
+    model = Blog
+    context_object_name = "blog"
+    template_name = 'blog/detail.html'

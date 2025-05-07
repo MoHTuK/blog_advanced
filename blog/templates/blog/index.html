@@ -3,7 +3,7 @@
 
 {% block title %} My blog {% endblock %} 
 
-{% block css_files %} <link rel="stylesheet" href="{% static 'blog/style.css' %}" {% endblock %}
+{% block css_files %} <link rel="stylesheet" href="{% static 'blog/style.css' %}"> {% endblock %}
 
 {% block content %}
 <!-- Blog posts section -->
@@ -11,66 +11,27 @@
     <div class='container'>
       <div class='grid'>
         <!-- article  -->
+         {% for blog in blogs %}
         <div class='grid-item'>
           <article class='article'>
             <div class='card'>
               <div class="overflow-img">
-                <a href="">
-                  <img src="../../../static/imgs/img5.jpg" alt="img1" class="img-fluid">
+                <a href="{{ blog.get_absolute_url }}">
+                  <img src="{{ blog.img.url }}" alt="{{ blog.title }}" class="img-fluid">
                 </a>
               </div>
               <div class="card-body text-center px-1">
-                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
+                <a href="" class="text-title display-1 text-dark">{{ blog.title }}</a>
                 <p class="secondary-title text-secondary display-3">
-                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
+                  <span><i class="far fa-clock text-primary"></i>Clock {{blog.created_at}}</span>
                   <span><i class="far fa-comments text-primary"></i>12</span>
                 </p>
               </div>
             </div>
           </article>
         </div>
+        {% endfor %}
         <!-- article  -->
-        <!-- article  -->
-        <div class='grid-item'>
-          <article class='article'>
-            <div class='card'>
-              <div class="overflow-img">
-                <a href="">
-                  <img src="../../../static/imgs/img6.jpg" alt="img1" class="img-fluid">
-                </a>
-              </div>
-              <div class="card-body text-center px-1">
-                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
-                <p class="secondary-title text-secondary display-3">
-                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
-                  <span><i class="far fa-comments text-primary"></i>12</span>
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-        <!-- article  -->
-        <!-- article  -->
-        <div class='grid-item'>
-          <article class='article'>
-            <div class='card'>
-              <div class="overflow-img">
-                <a href="">
-                  <img src="../../../static/imgs/img3.jpg" alt="img3" class="img-fluid">
-                </a>
-              </div>
-              <div class="card-body text-center px-1">
-                <a href="" class="text-title display-1 text-dark">Remote Work And Home Office With Laptop Phone And Camera</a>
-                <p class="secondary-title text-secondary display-3">
-                  <span><i class="far fa-clock text-primary"></i>Clock Wed 04, 2025</span>
-                  <span><i class="far fa-comments text-primary"></i>12</span>
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-        <!-- article  -->
-         
       </div>
     </div>
   </section>
